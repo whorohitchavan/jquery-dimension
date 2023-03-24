@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Dimensions Demo</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var $container = $('#container');
+
+            // Show dimensions inside the container div
+            $container.html(
+                '<p>Width: ' + $container.width() + 'px</p>' +
+                '<p>Height: ' + $container.height() + 'px</p>' +
+                '<p>Outer Width (includes padding, margin, border): ' + $container.outerWidth() + 'px</p>' +
+                '<p>Outer Height (includes padding, margin, border): ' + $container.outerHeight() + 'px</p>' +
+                '<p>Inner Width (includes padding): ' + $container.innerWidth() + 'px</p>' +
+                '<p>Inner Height (includes padding): ' + $container.innerHeight() + 'px</p>'
+            );
+        });
+    </script>
+</body>
+</html>
